@@ -16,12 +16,7 @@ const MovieCard = ({ movie }: Props) => {
 
 	return (
 		<>
-			<Button
-				variant='contained'
-				color='primary'
-				onClick={returnhome}>
-				Back Home
-			</Button>
+
 			<Card className={classes.root}>
 				<Image
 					priority

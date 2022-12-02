@@ -1,4 +1,4 @@
-import SearchResult from "components/SearchResult/SearchResult";
+import SearchResult from "components/SearchResult";
 import { GetServerSideProps } from "next";
 import { fetchMovies } from "services/api/tmdb";
 import { SearchMoviesResult } from "models/movie.model";

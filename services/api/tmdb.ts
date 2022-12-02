@@ -2,6 +2,7 @@ import { Movie, SearchMoviesResult } from "../../models/movie.model";
 
 const baseUrl = "https://api.themoviedb.org/3";
 const apiKey = process.env["NEXT_PUBLIC_TMDB_API_KEY"];
+const FallbackImage = "https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg";
 
 export async function fetchMovies(searchText: string): Promise<SearchMoviesResult> {
  return fetch(
@@ -20,3 +21,8 @@ export async function fetchMovie(id: string): Promise<Movie> {
       async (res) => await res.json()
     ) as Promise<Movie>;
   }
+
+  export function getImage(path: string) {
+    return `https://image.tmdb.org/t/p/w500/${path}`;
+  }
+  
